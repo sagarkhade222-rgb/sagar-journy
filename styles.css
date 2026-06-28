@@ -1121,6 +1121,9 @@ body::before {
   border-radius: 2px;
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .polaroid-image::after {
