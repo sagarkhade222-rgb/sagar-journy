@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sagar's Journey — A Story Still Being Written</title>
+  <meta name="description"
+    content="An emotional animated digital journey through Sagar's life — friendships, dreams, memories, and the people who made him who he is.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Ambient Particles Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Fireflies Canvas -->
+  <canvas id="fireflies-canvas"></canvas>
+
+  <!-- Easter Egg: Shooting Stars -->
+  <canvas id="shooting-stars-canvas"></canvas>
+
+  <!-- Falling Leaves -->
+  <div id="leaves-container"></div>
+
+  <!-- Floating Music Player -->
+  <div class="music-player" id="musicPlayer">
+    <button class="music-toggle" id="musicToggle" aria-label="Toggle Music">
+      <svg class="music-icon music-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 18V5l12-2v13" />
+        <circle cx="6" cy="18" r="3" />
+        <circle cx="18" cy="16" r="3" />
+        <line x1="1" y1="1" x2="23" y2="23" stroke-width="2.5" />
+      </svg>
+      <svg class="music-icon music-on" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2">
+        <path d="M9 18V5l12-2v13" />
+        <circle cx="6" cy="18" r="3" />
+        <circle cx="18" cy="16" r="3" />
+      </svg>
+    </button>
+    <span class="music-label">Piano</span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-name">Sagar's Journey</span>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle Navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#journey" class="nav-link">Journey</a></li>
+      <li><a href="#friends" class="nav-link">Friends</a></li>
+      <li><a href="#dreams" class="nav-link">Dreams</a></li>
+      <li><a href="#memories" class="nav-link">Memories</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#future" class="nav-link">Future</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-sunlight"></div>
+    <div class="hero-content">
+      <div class="hero-brand">
+        <h1 class="hero-title">
+          <span class="title-line" data-delay="0">Sagar's Journey</span>
+        </h1>
+        <p class="hero-subtitle-brand">A story still being written.</p>
+      </div>
+      <div class="hero-headline">
+        <p class="headline-line" data-delay="400">Every memory became a chapter.</p>
+        <p class="headline-line" data-delay="800">Every friend became a reason to keep walking.</p>
+      </div>
+      <div class="hero-description">
+        <p class="desc-line" data-delay="1200">This website is my real journey.</p>
+        <p class="desc-line" data-delay="1400">A place where every memory, every friendship, every dream,</p>
+        <p class="desc-line" data-delay="1600">every heartbreak and every achievement lives forever.</p>
+        <p class="desc-line special" data-delay="2000">This is not just my story.</p>
+        <p class="desc-line special" data-delay="2200">It belongs to everyone who walked beside me.</p>
+      </div>
+      <a href="#journey" class="hero-btn" id="startStoryBtn">
+        <span>Start My Story</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+          <path d="M12 5v14M19 12l-7 7-7-7" />
+        </svg>
+      </a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to begin</span>
+    </div>
+  </section>
+
+  <!-- Quote Interlude 1 -->
+  <section class="quote-section">
+    <div class="quote-container">
+      <blockquote class="emotional-quote reveal-on-scroll">
+        <p>"Some people become memories.</p>
+        <p>Some memories become home."</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Journey Timeline Section -->
+  <section class="section journey-section" id="journey">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-tag">Chapter One</span>
+      <h2 class="section-title">The Journey</h2>
+      <p class="section-subtitle">Every step led somewhere meaningful</p>
+    </div>
+
+    <div class="timeline">
+      <!-- Childhood -->
+      <div class="timeline-item left reveal-on-scroll" data-direction="left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="timeline-year">Early Years</div>
+          <h3 class="timeline-title">🌸 Childhood</h3>
+          <p class="timeline-desc">The days of innocence, curiosity and wonder. Running through sunlit fields, making
+            paper planes, and believing the world was infinite. Every little thing felt like magic — the smell of rain,
+            the warmth of home, and the sound of laughter echoing through the streets.</p>
+          <div class="timeline-emotion">Where it all began.</div>
+        </div>
+      </div>
+
+      <!-- School Days -->
+      <div class="timeline-item right reveal-on-scroll" data-direction="right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="timeline-year">School Days</div>
+          <h3 class="timeline-title">📚 School Days</h3>
+          <p class="timeline-desc">The first friendships that taught me what loyalty means. The classrooms where dreams
+            started forming. The first heartbreaks, the first victories, and the first lessons that textbooks never
+            taught. Chalk dust in the air, games in the rain, and promises we thought would last forever.</p>
+          <div class="timeline-emotion">Where bonds were forged.</div>
+        </div>
+      </div>
+
+      <!-- Engineering -->
+      <div class="timeline-item left reveal-on-scroll" data-direction="left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="timeline-year">Engineering</div>
+          <h3 class="timeline-title">⚡ Engineering</h3>
+          <p class="timeline-desc">Late nights, early mornings, and the beautiful chaos of figuring out who I really am.
+            The hostel rooms that became home, the friends who became family, and the assignments that pushed me to my
+            limits. This was where passion met persistence, and dreams started taking shape.</p>
+          <div class="timeline-emotion">Where dreams found direction.</div>
+        </div>
+      </div>
+
+      <!-- First Job -->
+      <div class="timeline-item right reveal-on-scroll" data-direction="right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="timeline-year">First Job</div>
+          <h3 class="timeline-title">💼 First Job</h3>
+          <p class="timeline-desc">Stepping into the real world — a mix of excitement and anxiety. Learning that success
+            isn't just about grades, it's about showing up every day. The first paycheck, the first mistakes that taught
+            more than any degree, and the realization that adulthood is both terrifying and beautiful.</p>
+          <div class="timeline-emotion">Where reality met ambition.</div>
+        </div>
+      </div>
+
+      <!-- Dreams -->
+      <div class="timeline-item left reveal-on-scroll" data-direction="left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="timeline-year">Dreaming</div>
+          <h3 class="timeline-title">✨ Dreams</h3>
+          <p class="timeline-desc">The quiet moments when I dared to imagine something bigger. Aviation, cryogenics,
+            technology — fields that most people said were impossible for someone like me. But dreams don't care about
+            logic. They care about the heart that holds them.</p>
+          <div class="timeline-emotion">Where imagination took flight.</div>
+        </div>
+      </div>
+
+      <!-- Current Journey -->
+      <div class="timeline-item right reveal-on-scroll" data-direction="right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="timeline-year">Now</div>
+          <h3 class="timeline-title">🌅 Current Journey</h3>
+          <p class="timeline-desc">Right here, right now. Still learning, still growing, still making mistakes and still
+            standing up. The journey isn't over — it's just getting started. Every day brings a new chance to write
+            another chapter worth remembering.</p>
+          <div class="timeline-emotion">Where the story continues.</div>
+        </div>
+      </div>
+
+      <!-- Future Goals -->
+      <div class="timeline-item left reveal-on-scroll" data-direction="left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="timeline-year">Tomorrow</div>
+          <h3 class="timeline-title">🚀 Future Goals</h3>
+          <p class="timeline-desc">The horizon stretches infinitely. Indian Oil, building something that matters,
+            traveling to places that exist only in my imagination right now. The future isn't written yet, and that's
+            the most beautiful part — I get to choose what comes next.</p>
+          <div class="timeline-emotion">Where the story is yet to be written.</div>
+        </div>
+      </div>
+
+      <div class="timeline-line"></div>
+    </div>
+  </section>
+
+  <!-- Quote Interlude 2 -->
+  <section class="quote-section">
+    <div class="quote-container">
+      <blockquote class="emotional-quote reveal-on-scroll">
+        <p>"The journey matters more</p>
+        <p>than the destination."</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Friends Section -->
+  <section class="section friends-section" id="friends">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-tag">The People</span>
+      <h2 class="section-title">Friends</h2>
+      <p class="section-subtitle">The ones who made the journey worth it</p>
+    </div>
+
+    <div class="friends-grid">
+      <!-- Haruki -->
+      <div class="friend-card reveal-on-scroll" data-direction="left">
+        <div class="friend-card-inner glass-card">
+          <div class="friend-glow"></div>
+          <div class="friend-particles"></div>
+          <div class="friend-photo-wrap">
+            <div class="friend-photo" style="background: linear-gradient(135deg, #FFB7B2, #FFDAC1);">
+              <span class="friend-initial">H</span>
+            </div>
+          </div>
+          <h3 class="friend-name">Haruki <span class="friend-nickname">(Haru)</span></h3>
+          <span class="friend-relation">Brother from another mother</span>
+          <p class="friend-quote">"Some bonds are not made by blood, but by the storms we weather together."</p>
+          <p class="friend-memory">The one who always stood beside me. Through every high and every low, Haru was there
+            — not because he had to be, but because that's just who he is. A brother in every sense that matters.</p>
+          <div class="friend-importance">
+            <span class="importance-tag">🤝 Always There</span>
+            <span class="importance-tag">💪 My Strength</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rainy -->
+      <div class="friend-card reveal-on-scroll" data-direction="up">
+        <div class="friend-card-inner glass-card">
+          <div class="friend-glow"></div>
+          <div class="friend-particles"></div>
+          <div class="friend-photo-wrap">
+            <div class="friend-photo" style="background: linear-gradient(135deg, #B5EAD7, #C7CEEA);">
+              <span class="friend-initial">R</span>
+            </div>
+          </div>
+          <h3 class="friend-name">Rainy</h3>
+          <span class="friend-relation">A close friend woven into memories</span>
+          <p class="friend-quote">"Some friendships are like rain — they come quietly and make everything bloom."</p>
+          <p class="friend-memory">A close friend who became part of many memories. Like the rain after a long summer —
+            refreshing, comforting, and unforgettable. Rainy is one of those people who makes ordinary moments
+            extraordinary.</p>
+          <div class="friend-importance">
+            <span class="importance-tag">🌧️ Comforting</span>
+            <span class="importance-tag">🌸 Unforgettable</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gojo -->
+      <div class="friend-card reveal-on-scroll" data-direction="right">
+        <div class="friend-card-inner glass-card">
+          <div class="friend-glow"></div>
+          <div class="friend-particles"></div>
+          <div class="friend-photo-wrap">
+            <div class="friend-photo" style="background: linear-gradient(135deg, #E2F0CB, #FFDAC1);">
+              <span class="friend-initial">G</span>
+            </div>
+          </div>
+          <h3 class="friend-name">Gojo</h3>
+          <span class="friend-relation">The energy of every room</span>
+          <p class="friend-quote">"Life is too short to not laugh until your stomach hurts."</p>
+          <p class="friend-memory">The fun friend. Always bringing energy. When Gojo enters a room, the air changes — it
+            gets lighter, louder, and happier. Every group needs that one person who turns ordinary days into stories
+            you'll tell for years.</p>
+          <div class="friend-importance">
+            <span class="importance-tag">⚡ Energy</span>
+            <span class="importance-tag">😂 Joy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Swati -->
+      <div class="friend-card reveal-on-scroll" data-direction="left">
+        <div class="friend-card-inner glass-card">
+          <div class="friend-glow"></div>
+          <div class="friend-particles"></div>
+          <div class="friend-photo-wrap">
+            <div class="friend-photo" style="background: linear-gradient(135deg, #C7CEEA, #FFB7B2);">
+              <span class="friend-initial">S</span>
+            </div>
+          </div>
+          <h3 class="friend-name">Swati</h3>
+          <span class="friend-relation">Sister from another mother</span>
+          <p class="friend-quote">"A sister isn't always the one born into your family. Sometimes, she's the one who
+            shows up when nobody else does."</p>
+          <p class="friend-memory">Always supportive. The kind of person who believes in you even when you've stopped
+            believing in yourself. Swati is proof that family isn't always about genetics — it's about who chooses to
+            stay.</p>
+          <div class="friend-importance">
+            <span class="importance-tag">🫂 Supportive</span>
+            <span class="importance-tag">💕 Family</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nia -->
+      <div class="friend-card reveal-on-scroll nia-card" data-direction="up">
+        <div class="friend-card-inner glass-card">
+          <div class="friend-glow nia-glow"></div>
+          <div class="friend-particles"></div>
+          <div class="friend-photo-wrap">
+            <div class="friend-photo nia-photo" style="background: linear-gradient(135deg, #FFD1DC, #FFC8DD, #FFAFCC);">
+              <span class="friend-initial">N</span>
+            </div>
+          </div>
+          <h3 class="friend-name">Nia</h3>
+          <span class="friend-relation">The chapter that changed everything</span>
+          <p class="friend-quote">"Some people walk into your life and change the entire direction of your story."</p>
+          <p class="friend-memory">The love who changed my life. Even today she remains one of the most precious
+            chapters of my story. Some stories don't get the ending we hope for, but that doesn't make them less
+            beautiful. Nia taught me what it means to feel deeply, to love completely, and to carry someone in your
+            heart — even across time.</p>
+          <div class="friend-importance">
+            <span class="importance-tag">💗 Precious</span>
+            <span class="importance-tag">📖 Life-changing</span>
+            <span class="importance-tag">🌟 Unforgettable</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Interlude 3 -->
+  <section class="quote-section">
+    <div class="quote-container">
+      <blockquote class="emotional-quote reveal-on-scroll">
+        <p>"We never realize we're making memories</p>
+        <p>until they become stories."</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Dreams Section -->
+  <section class="section dreams-section" id="dreams">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-tag">The Vision</span>
+      <h2 class="section-title">Dreams</h2>
+      <p class="section-subtitle">The things I reach for when I close my eyes</p>
+    </div>
+
+    <div class="dreams-grid">
+      <div class="dream-card reveal-on-scroll glass-card" data-delay="0">
+        <div class="dream-icon">⚡</div>
+        <h3 class="dream-title">Electrical Engineer</h3>
+        <p class="dream-desc">Building the invisible forces that power the world</p>
+        <div class="dream-glow"></div>
+      </div>
+
+      <div class="dream-card reveal-on-scroll glass-card" data-delay="100">
+        <div class="dream-icon">✈️</div>
+        <h3 class="dream-title">Learning Aviation</h3>
+        <p class="dream-desc">To understand the science of flight and touch the sky</p>
+        <div class="dream-glow"></div>
+      </div>
+
+      <div class="dream-card reveal-on-scroll glass-card" data-delay="200">
+        <div class="dream-icon">❄️</div>
+        <h3 class="dream-title">Cryogenic Engineering</h3>
+        <p class="dream-desc">Exploring the mysteries at the edge of absolute zero</p>
+        <div class="dream-glow"></div>
+      </div>
+
+      <div class="dream-card reveal-on-scroll glass-card" data-delay="300">
+        <div class="dream-icon">🛢️</div>
+        <h3 class="dream-title">Indian Oil</h3>
+        <p class="dream-desc">Contributing to the energy backbone of my nation</p>
+        <div class="dream-glow"></div>
+      </div>
+
+      <div class="dream-card reveal-on-scroll glass-card" data-delay="400">
+        <div class="dream-icon">🔧</div>
+        <h3 class="dream-title">Building Amazing Projects</h3>
+        <p class="dream-desc">Creating things that make people stop and wonder</p>
+        <div class="dream-glow"></div>
+      </div>
+
+      <div class="dream-card reveal-on-scroll glass-card" data-delay="500">
+        <div class="dream-icon">📖</div>
+        <h3 class="dream-title">Creating Beautiful Stories</h3>
+        <p class="dream-desc">So that one day someone finds comfort in my words</p>
+        <div class="dream-glow"></div>
+      </div>
+
+      <div class="dream-card reveal-on-scroll glass-card" data-delay="600">
+        <div class="dream-icon">🎌</div>
+        <h3 class="dream-title">Anime World</h3>
+        <p class="dream-desc">Living in the warmth of stories that feel like home</p>
+        <div class="dream-glow"></div>
+      </div>
+
+      <div class="dream-card reveal-on-scroll glass-card" data-delay="700">
+        <div class="dream-icon">⏳</div>
+        <h3 class="dream-title">Time Travel</h3>
+        <p class="dream-desc">Because some moments deserve to be lived again</p>
+        <div class="dream-glow"></div>
+      </div>
+
+      <div class="dream-card reveal-on-scroll glass-card" data-delay="800">
+        <div class="dream-icon">🚀</div>
+        <h3 class="dream-title">Future Technology</h3>
+        <p class="dream-desc">Imagining tomorrow and building it today</p>
+        <div class="dream-glow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Memories Section -->
+  <section class="section memories-section" id="memories">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-tag">The Vault</span>
+      <h2 class="section-title">Memories</h2>
+      <p class="section-subtitle">Moments frozen in time, kept safe forever</p>
+    </div>
+
+    <div class="memories-wall">
+      <div class="memory-note reveal-on-scroll glass-card" style="--rotation: -3deg;">
+        <div class="memory-pin"></div>
+        <p class="memory-text">That evening when we walked without any destination and somehow found ourselves.</p>
+        <span class="memory-date">One summer evening</span>
+      </div>
+
+      <div class="memory-note reveal-on-scroll glass-card" style="--rotation: 2deg;">
+        <div class="memory-pin"></div>
+        <p class="memory-text">Staying up past midnight, talking about everything and nothing. Those conversations built
+          us.</p>
+        <span class="memory-date">Countless late nights</span>
+      </div>
+
+      <div class="memory-note reveal-on-scroll glass-card" style="--rotation: -1deg;">
+        <div class="memory-pin"></div>
+        <p class="memory-text">The first time I realized some people are worth more than all the plans in the world.</p>
+        <span class="memory-date">A quiet realization</span>
+      </div>
+
+      <div class="memory-note reveal-on-scroll glass-card" style="--rotation: 4deg;">
+        <div class="memory-pin"></div>
+        <p class="memory-text">Laughing so hard that we forgot what was funny. Those are the best kind of memories.</p>
+        <span class="memory-date">Every time with friends</span>
+      </div>
+
+      <div class="memory-note reveal-on-scroll glass-card" style="--rotation: -2deg;">
+        <div class="memory-pin"></div>
+        <p class="memory-text">The day I failed and thought it was the end. Looking back, it was actually the beginning.
+        </p>
+        <span class="memory-date">A turning point</span>
+      </div>
+
+      <div class="memory-note reveal-on-scroll glass-card" style="--rotation: 3deg;">
+        <div class="memory-pin"></div>
+        <p class="memory-text">Rain on the rooftop, tea in hand, and the feeling that everything will be okay.</p>
+        <span class="memory-date">Monsoon season</span>
+      </div>
+
+      <div class="memory-note reveal-on-scroll glass-card" style="--rotation: -4deg;">
+        <div class="memory-pin"></div>
+        <p class="memory-text">The goodbye that wasn't supposed to hurt but did. Some people leave footprints you can
+          never erase.</p>
+        <span class="memory-date">An unexpected farewell</span>
+      </div>
+
+      <div class="memory-note reveal-on-scroll glass-card" style="--rotation: 1deg;">
+        <div class="memory-pin"></div>
+        <p class="memory-text">That moment when a song played and suddenly I was back in a memory I thought I'd
+          forgotten.</p>
+        <span class="memory-date">A random song</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Interlude 4 -->
+  <section class="quote-section">
+    <div class="quote-container">
+      <blockquote class="emotional-quote reveal-on-scroll">
+        <p>"Not all storms come to disrupt your life.</p>
+        <p>Some come to clear your path."</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section gallery-section" id="gallery">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-tag">The Album</span>
+      <h2 class="section-title">Gallery</h2>
+      <p class="section-subtitle">Snapshots from the journey</p>
+    </div>
+
+    <div class="polaroid-grid">
+      <div class="polaroid reveal-on-scroll" style="--rotation: -5deg;">
+        <div class="polaroid-image" style="background: linear-gradient(135deg, #FFDEE9, #B5FFFC);"></div>
+        <span class="polaroid-caption">Childhood days</span>
+      </div>
+      <div class="polaroid reveal-on-scroll" style="--rotation: 3deg;">
+        <div class="polaroid-image" style="background: linear-gradient(135deg, #A18CD1, #FBC2EB);"></div>
+        <span class="polaroid-caption">School memories</span>
+      </div>
+      <div class="polaroid reveal-on-scroll" style="--rotation: -2deg;">
+        <div class="polaroid-image" style="background: linear-gradient(135deg, #FAD0C4, #FFD1FF);"></div>
+        <span class="polaroid-caption">With Haru</span>
+      </div>
+      <div class="polaroid reveal-on-scroll" style="--rotation: 4deg;">
+        <div class="polaroid-image" style="background: linear-gradient(135deg, #A1C4FD, #C2E9FB);"></div>
+        <span class="polaroid-caption">Engineering days</span>
+      </div>
+      <div class="polaroid reveal-on-scroll" style="--rotation: -3deg;">
+        <div class="polaroid-image" style="background: linear-gradient(135deg, #FFECD2, #FCB69F);"></div>
+        <span class="polaroid-caption">Rainy days</span>
+      </div>
+      <div class="polaroid reveal-on-scroll" style="--rotation: 6deg;">
+        <div class="polaroid-image" style="background: linear-gradient(135deg, #D4FC79, #96E6A1);"></div>
+        <span class="polaroid-caption">Fun with Gojo</span>
+      </div>
+      <div class="polaroid reveal-on-scroll" style="--rotation: -4deg;">
+        <div class="polaroid-image" style="background: linear-gradient(135deg, #84FAB0, #8FD3F4);"></div>
+        <span class="polaroid-caption">Summer adventures</span>
+      </div>
+      <div class="polaroid reveal-on-scroll" style="--rotation: 2deg;">
+        <div class="polaroid-image" style="background: linear-gradient(135deg, #FFC3A0, #FFAFBD);"></div>
+        <span class="polaroid-caption">Golden sunsets</span>
+      </div>
+      <div class="polaroid reveal-on-scroll" style="--rotation: -6deg;">
+        <div class="polaroid-image" style="background: linear-gradient(135deg, #E0C3FC, #8EC5FC);"></div>
+        <span class="polaroid-caption">Starry nights</span>
+      </div>
+      <div class="polaroid reveal-on-scroll" style="--rotation: 1deg;">
+        <div class="polaroid-image" style="background: linear-gradient(135deg, #F5576C, #FF9A9E);"></div>
+        <span class="polaroid-caption">Precious moments</span>
+      </div>
+      <div class="polaroid reveal-on-scroll" style="--rotation: -1deg;">
+        <div class="polaroid-image" style="background: linear-gradient(135deg, #667EEA, #764BA2);"></div>
+        <span class="polaroid-caption">Night talks</span>
+      </div>
+      <div class="polaroid reveal-on-scroll" style="--rotation: 5deg;">
+        <div class="polaroid-image" style="background: linear-gradient(135deg, #F093FB, #F5576C);"></div>
+        <span class="polaroid-caption">Dreams alive</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Interlude 5 -->
+  <section class="quote-section">
+    <div class="quote-container">
+      <blockquote class="emotional-quote reveal-on-scroll">
+        <p>"Some chapters close.</p>
+        <p>But the book? The book goes on."</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Future Section -->
+  <section class="section future-section" id="future">
+    <canvas id="stars-canvas"></canvas>
+    <div class="future-path"></div>
+    <div class="future-content">
+      <div class="future-text reveal-on-scroll">
+        <h2 class="future-headline">
+          <span class="future-line">This isn't the end.</span>
+          <span class="future-line accent">It's only the next chapter.</span>
+        </h2>
+        <p class="future-desc">The horizon stretches endlessly ahead. Every sunrise brings another page, another
+          possibility, another chance to create something beautiful. The best chapters haven't been written yet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-thanks reveal-on-scroll">"Thank you to everyone who became part of my story."</p>
+      <p class="footer-continued reveal-on-scroll">To be continued...</p>
+      <div class="footer-birds">
+        <div class="bird bird-1">🕊️</div>
+        <div class="bird bird-2">🕊️</div>
+        <div class="bird bird-3">🕊️</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Hidden Easter Egg Stars -->
+  <div class="easter-egg-star" style="top: 15%; left: 8%;" title="✨ You found a hidden star!">⭐</div>
+  <div class="easter-egg-star" style="top: 35%; left: 92%;" title="💫 A secret memory lives here">💫</div>
+  <div class="easter-egg-star" style="top: 55%; left: 5%;" title="🌟 Keep looking, there are more">🌟</div>
+  <div class="easter-egg-star" style="top: 75%; left: 95%;" title="⭐ Some things are hidden in plain sight">⭐</div>
+  <div class="easter-egg-star" style="top: 88%; left: 12%;" title="💫 You're one of the special ones">💫</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
