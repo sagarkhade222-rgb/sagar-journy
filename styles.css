@@ -1031,8 +1031,18 @@ body::before {
   transition: var(--transition);
 }
 
-.memory-note[data-rotation] {
-  transform: rotate(calc(attr(data-rotation) * 1deg));
+/* Memory notes - rotation handled via inline CSS variable */
+.memory-note {
+  transform: rotate(var(--rotation, 0deg));
+}
+
+.memory-note:hover {
+  transform: rotate(0deg) translateY(-8px) !important;
+  box-shadow: 0 20px 50px rgba(232, 160, 191, 0.2);
+}
+
+.memory-note.visible {
+  opacity: 1;
 }
 
 .memory-note:hover {
@@ -1461,19 +1471,4 @@ body {
 @keyframes pageLoad {
   0% { opacity: 0; }
   100% { opacity: 1; }
-}
-
-/* Memory note rotations via data attribute */
-.memory-note[data-rotation="-3"] { transform: rotate(-3deg); }
-.memory-note[data-rotation="2"] { transform: rotate(2deg); }
-.memory-note[data-rotation="-1"] { transform: rotate(-1deg); }
-.memory-note[data-rotation="4"] { transform: rotate(4deg); }
-.memory-note[data-rotation="-2"] { transform: rotate(-2deg); }
-.memory-note[data-rotation="3"] { transform: rotate(3deg); }
-.memory-note[data-rotation="-4"] { transform: rotate(-4deg); }
-.memory-note[data-rotation="1"] { transform: rotate(1deg); }
-
-/* Hide visible class rotation override */
-.memory-note.visible {
-  opacity: 1;
 }
